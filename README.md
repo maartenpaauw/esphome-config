@@ -1,2 +1,2 @@
-# ESP Home Yaml Configuration
+# ESP Home YAML Configuration
 Maarten Paauw's esphomeyaml configuration files
