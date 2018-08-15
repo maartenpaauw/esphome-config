@@ -15,6 +15,10 @@ mqtt:
 ota:
   password: !secret ota_password
 
+deep_sleep:
+  run_duration: 30s
+  sleep_duration: 1min
+
 switch:
   - platform: gpio
     pin: D3
