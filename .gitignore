@@ -1,5 +1,3 @@
-# Build directories
-candle_*/
-
-# Secrets
 secrets.yaml
+.esphome/
+sonoff_s20_wall_fan/

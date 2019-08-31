@@ -1,6 +1,5 @@
-# ESP Home YAML Configuration
-Maarten Paauw's ESP Home YAML configuration files
+# ESP Home Configuration
+Maarten Paauw's ESP Home configuration files
 
 ## Components
-- Candle (switch) - 1×
-- Bed Occupied (sensor) - 2×
+- iTead Sonoff S20 - 1×
