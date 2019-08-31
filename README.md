@@ -2,4 +2,4 @@
 Maarten Paauw's ESP Home configuration files
 
 ## Components
-- iTead Sonoff S20 - 1×
+- iTead Sonoff S20 - 2×

@@ -1,0 +1,46 @@
+esphome:
+  name: sonoff_s20_airco
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+logger:
+
+api:
+  password: !secret ota_password
+
+ota:
+  password: !secret ota_password
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    name: sonoff_s20_airco_button
+    on_press:
+      - switch.toggle: sonoff_s20_airco_relay
+  - platform: status
+    name: sonoff_s20_airco_status
+
+switch:
+  - platform: gpio
+    name: sonoff_s20_airco_relay
+    pin: GPIO12
+    id: sonoff_s20_airco_relay
+
+output:
+  - platform: esp8266_pwm
+    id: s20_green_led
+    pin:
+      number: GPIO13
+      inverted: true
+
+light:
+  - platform: monochromatic
+    name: sonoff_s20_airco_green_led
+    output: s20_green_led
