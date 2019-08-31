@@ -1,3 +1,4 @@
 secrets.yaml
 .esphome/
 sonoff_s20_wall_fan/
+sonoff_s20_airco/

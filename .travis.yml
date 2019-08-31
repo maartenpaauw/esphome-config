@@ -1,0 +1,12 @@
+dist: xenial
+language: python
+python:
+  - 2.7.16
+before_install:
+  - cp secrets.example secrets.yaml
+install:
+  - pip install esphome
+  - pip install voluptuous==0.11.5
+script:
+  - esphome sonoff_s20_airco.yaml config
+  - esphome sonoff_s20_wall_fan.yaml config
