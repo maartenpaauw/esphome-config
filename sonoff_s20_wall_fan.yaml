@@ -22,6 +22,8 @@ binary_sensor:
       mode: INPUT_PULLUP
       inverted: true
     name: sonoff_s20_wall_fan_button
+    on_press:
+      - switch.toggle: sonoff_s20_wall_fan_relay
   - platform: status
     name: sonoff_s20_wall_fan_status
 
@@ -29,6 +31,7 @@ switch:
   - platform: gpio
     name: sonoff_s20_wall_fan_relay
     pin: GPIO12
+    id: sonoff_s20_wall_fan_relay
 
 output:
   - platform: esp8266_pwm
