@@ -9,3 +9,4 @@
 ## Components
 
 - iTead Sonoff S20 - 2×
+- iTead Sonoff Touch - 1×

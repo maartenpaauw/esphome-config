@@ -1,0 +1,46 @@
+esphome:
+  name: sonoff_touch_dressing_room
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+logger:
+
+api:
+  password: !secret ota_password
+
+ota:
+  password: !secret ota_password
+
+binary_sensor:
+  - platform: gpio
+    name: sonoff_touch_dressing_room_button
+    pin:
+      number: GPIO0
+      mode: INPUT_PULLUP
+      inverted: true
+    on_press:
+      - switch.toggle: relay
+  - platform: status
+    name: sonoff_touch_dressing_room_status
+
+switch:
+  - platform: gpio
+    name: sonoff_touch_dressing_room_relay
+    id: relay
+    pin: GPIO12
+
+output:
+  - platform: esp8266_pwm
+    id: blue_led
+    pin:
+      number: GPIO13
+      inverted: true
+
+light:
+  - platform: monochromatic
+    name: sonoff_touch_dressing_room_blue_led
+    output: blue_led

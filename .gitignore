@@ -7,3 +7,4 @@ secrets.yaml
 # Ignore every build directory for each component.
 sonoff_s20_wall_fan/
 sonoff_s20_airco/
+sonoff_touch_dressing_room/
