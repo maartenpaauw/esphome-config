@@ -15,6 +15,18 @@ api:
 ota:
   password: !secret ota_password
 
+binary_sensor:
+  - platform: status
+    name: arilux_e27_1_status
+
+light:
+  - platform: rgbw
+    name: arilux_e27_1_light
+    red: red
+    green: green
+    blue: blue
+    white: white
+
 my9231:
   data_pin: GPIO13
   clock_pin: GPIO15
@@ -33,10 +45,6 @@ output:
     id: blue
     channel: 1
 
-light:
-  - platform: rgbw
-    name: arilux_e27_1_light
-    red: red
-    green: green
-    blue: blue
-    white: white
+text_sensor:
+  - platform: version
+    name: arilux_e27_1_version

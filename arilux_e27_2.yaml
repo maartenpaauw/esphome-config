@@ -19,6 +19,18 @@ my9231:
   data_pin: GPIO13
   clock_pin: GPIO15
 
+binary_sensor:
+  - platform: status
+    name: arilux_e27_2_status
+
+light:
+  - platform: rgbw
+    name: arilux_e27_2_light
+    red: red
+    green: green
+    blue: blue
+    white: white
+
 output:
   - platform: my9231
     id: white
@@ -33,10 +45,6 @@ output:
     id: blue
     channel: 1
 
-light:
-  - platform: rgbw
-    name: arilux_e27_2_light
-    red: red
-    green: green
-    blue: blue
-    white: white
+text_sensor:
+  - platform: version
+    name: arilux_e27_2_version
