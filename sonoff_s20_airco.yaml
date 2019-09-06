@@ -27,11 +27,10 @@ binary_sensor:
   - platform: status
     name: sonoff_s20_airco_status
 
-switch:
-  - platform: gpio
-    name: sonoff_s20_airco_relay
-    id: relay
-    pin: GPIO12
+light:
+  - platform: monochromatic
+    name: sonoff_s20_airco_green_led
+    output: green_led
 
 output:
   - platform: esp8266_pwm
@@ -40,7 +39,12 @@ output:
       number: GPIO13
       inverted: true
 
-light:
-  - platform: monochromatic
-    name: sonoff_s20_airco_green_led
-    output: green_led
+switch:
+  - platform: gpio
+    name: sonoff_s20_airco_relay
+    id: relay
+    pin: GPIO12
+
+text_sensor:
+  - platform: version
+    name: sonoff_s20_airco_version

@@ -8,6 +8,7 @@ install:
   - pip install esphome
   - pip install voluptuous==0.11.5
 script:
+  - esphome sonoff_basic_1.yaml config
   - esphome sonoff_s20_airco.yaml config
   - esphome sonoff_s20_wall_fan.yaml config
   - esphome sonoff_touch_dressing_room.yaml config

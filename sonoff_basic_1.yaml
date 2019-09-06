@@ -1,5 +1,5 @@
 esphome:
-  name: sonoff_s20_wall_fan
+  name: sonoff_basic_1
   platform: ESP8266
   board: esp01_1m
 
@@ -17,34 +17,25 @@ ota:
 
 binary_sensor:
   - platform: gpio
-    name: sonoff_s20_wall_fan_button
+    name: sonoff_basic_1_button
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
       inverted: true
     on_press:
       - switch.toggle: relay
-  - platform: status
-    name: sonoff_s20_wall_fan_status
-
-light:
-  - platform: monochromatic
-    name: sonoff_s20_wall_fan_green_led
-    output: green_led
-
-output:
-  - platform: esp8266_pwm
-    id: green_led
-    pin:
-      number: GPIO13
-      inverted: true
 
 switch:
   - platform: gpio
-    name: sonoff_s20_wall_fan_relay
+    name: sonoff_basic_1_relay
     id: relay
     pin: GPIO12
 
+status_led:
+  pin:
+    number: GPIO13
+    inverted: true
+
 text_sensor:
   - platform: version
-    name: sonoff_s20_wall_fan_version
+    name: sonoff_basic_1_version
