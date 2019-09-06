@@ -8,6 +8,7 @@
 
 ## Components
 
+- Arilux E27 RGBW - 2×
 - iTead Sonoff Basic - 1×
 - iTead Sonoff S20 - 2×
 - iTead Sonoff Touch - 1×

@@ -1,0 +1,42 @@
+esphome:
+  name: arilux_e27_1
+  platform: ESP8266
+  board: esp01_1m
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+logger:
+
+api:
+  password: !secret ota_password
+
+ota:
+  password: !secret ota_password
+
+my9231:
+  data_pin: GPIO13
+  clock_pin: GPIO15
+
+output:
+  - platform: my9231
+    id: white
+    channel: 0
+  - platform: my9231
+    id: red
+    channel: 3
+  - platform: my9231
+    id: green
+    channel: 2
+  - platform: my9231
+    id: blue
+    channel: 1
+
+light:
+  - platform: rgbw
+    name: arilux_e27_1_light
+    red: red
+    green: green
+    blue: blue
+    white: white
