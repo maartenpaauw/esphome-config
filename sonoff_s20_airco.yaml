@@ -1,3 +1,4 @@
+---
 esphome:
   name: sonoff_s20_airco
   platform: ESP8266

@@ -1,3 +1,4 @@
+---
 esphome:
   name: sonoff_basic_1
   platform: ESP8266

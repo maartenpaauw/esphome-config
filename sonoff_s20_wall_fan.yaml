@@ -1,3 +1,4 @@
+---
 esphome:
   name: sonoff_s20_wall_fan
   platform: ESP8266

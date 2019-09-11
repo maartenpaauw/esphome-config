@@ -1,3 +1,4 @@
+---
 esphome:
   name: arilux_e27_2
   platform: ESP8266

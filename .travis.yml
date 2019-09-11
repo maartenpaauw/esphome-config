@@ -1,13 +1,20 @@
 dist: xenial
+
 language: python
+
 python:
   - 2.7.16
+
 before_install:
   - cp secrets.example secrets.yaml
+
 install:
+  - pip install yamllint
   - pip install esphome
   - pip install voluptuous==0.11.5
+
 script:
+  - yamllint .
   - esphome arilux_e27_1.yaml config
   - esphome arilux_e27_2.yaml config
   - esphome sonoff_basic_1.yaml config

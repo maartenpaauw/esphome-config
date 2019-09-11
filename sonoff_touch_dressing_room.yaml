@@ -1,3 +1,4 @@
+---
 esphome:
   name: sonoff_touch_dressing_room
   platform: ESP8266
