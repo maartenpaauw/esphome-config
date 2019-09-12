@@ -1,24 +1,16 @@
 ---
-esphome:
-  name: sonoff_basic_1
-  platform: ESP8266
-  board: esp01_1m
+substitutions:
+  <<: !include secrets.yaml
+  esphome_name: sonoff_basic_1
+  esphome_platform: ESP8266
+  esphome_board: esp01_1m
 
-wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
-
-logger:
-
-api:
-  password: !secret ota_password
-
-ota:
-  password: !secret ota_password
+<<: !include components/common.yaml
 
 binary_sensor:
+  - !include components/binary_sensors/status.yaml
   - platform: gpio
-    name: sonoff_basic_1_button
+    name: ${esphome_name}_button
     pin:
       number: GPIO0
       mode: INPUT_PULLUP
@@ -26,9 +18,12 @@ binary_sensor:
     on_press:
       - switch.toggle: relay
 
+text_sensor:
+  - !include components/text_sensors/version.yaml
+
 switch:
   - platform: gpio
-    name: sonoff_basic_1_relay
+    name: ${esphome_name}_relay
     id: relay
     pin: GPIO12
 
@@ -36,7 +31,3 @@ status_led:
   pin:
     number: GPIO13
     inverted: true
-
-text_sensor:
-  - platform: version
-    name: sonoff_basic_1_version

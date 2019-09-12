@@ -1,0 +1,3 @@
+---
+platform: version
+name: ${esphome_name}_version

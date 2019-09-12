@@ -1,0 +1,3 @@
+---
+platform: status
+name: ${esphome_name}_status

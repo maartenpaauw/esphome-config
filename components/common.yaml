@@ -1,0 +1,6 @@
+---
+<<: !include core/core.yaml
+<<: !include core/wifi.yaml
+<<: !include core/logger.yaml
+<<: !include core/api.yaml
+<<: !include core/ota.yaml

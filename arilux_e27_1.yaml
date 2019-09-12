@@ -1,36 +1,29 @@
 ---
-esphome:
-  name: arilux_e27_1
-  platform: ESP8266
-  board: esp01_1m
+substitutions:
+  <<: !include secrets.yaml
+  esphome_name: arilux_e27_1
+  esphome_platform: ESP8266
+  esphome_board: esp01_1m
 
-wifi:
-  ssid: !secret wifi_ssid
-  password: !secret wifi_password
-
-logger:
-
-api:
-  password: !secret ota_password
-
-ota:
-  password: !secret ota_password
+<<: !include components/common.yaml
 
 binary_sensor:
-  - platform: status
-    name: arilux_e27_1_status
+  - !include components/binary_sensors/status.yaml
 
-light:
-  - platform: rgbw
-    name: arilux_e27_1_light
-    red: red
-    green: green
-    blue: blue
-    white: white
+text_sensor:
+  - !include components/text_sensors/version.yaml
 
 my9231:
   data_pin: GPIO13
   clock_pin: GPIO15
+
+light:
+  - platform: rgbw
+    name: ${esphome_name}_light
+    red: red
+    green: green
+    blue: blue
+    white: white
 
 output:
   - platform: my9231
@@ -45,7 +38,3 @@ output:
   - platform: my9231
     id: blue
     channel: 1
-
-text_sensor:
-  - platform: version
-    name: arilux_e27_1_version

@@ -1,0 +1,5 @@
+---
+esphome:
+  name: ${esphome_name}
+  platform: ${esphome_platform}
+  board: ${esphome_board}

@@ -1,0 +1,3 @@
+---
+api:
+  password: ${ota_password}
