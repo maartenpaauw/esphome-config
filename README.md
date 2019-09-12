@@ -8,10 +8,31 @@
 
 ## Devices
 
-- Arilux E27 RGBW - 2×
-- iTead Sonoff Basic - 1×
-- iTead Sonoff S20 - 2×
-- iTead Sonoff Touch - 1×
+### Arilux E27 RGBW
+
+- Light <sup>([light.yaml](./components/devices/arilux/light.yaml))</sup>
+- MY9231 <sup>([my9231.yaml](./components/devices/arilux/my9231.yaml))</sup>
+- Output <sup>([output.yaml](./components/devices/arilux/output.yaml))</sup>
+
+### Sonoff Basic
+
+- Binary Sensor <sup>([binary_sensor.yaml](./components/devices/sonoff_basic/binary_sensor.yaml))</sup>
+- Status LED <sup>([status_led.yaml](./components/devices/sonoff_basic/status_led.yaml))</sup>
+- Switch <sup>([switch.yaml](./components/devices/sonoff_basic/switch.yaml))</sup>
+
+### Sonoff S20
+
+- Binary Sensor <sup>([binary_sensor.yaml](./components/devices/sonoff_s20/binary_sensor.yaml))</sup>
+- Light <sup>([light.yaml](./components/devices/sonoff_s20/light.yaml))</sup>
+- Output <sup>([output.yaml](./components/devices/sonoff_s20/output.yaml))</sup>
+- Switch <sup>([switch.yaml](./components/devices/sonoff_s20/switch.yaml))</sup>
+
+### Sonoff Touch
+
+- Binary Sensor <sup>([binary_sensor.yaml](./components/devices/sonoff_touch/binary_sensor.yaml))</sup>
+- Light <sup>([light.yaml](./components/devices/sonoff_touch/light.yaml))</sup>
+- Output <sup>([output.yaml](./components/devices/sonoff_touch/output.yaml))</sup>
+- Switch <sup>([switch.yaml](./components/devices/sonoff_touch/switch.yaml))</sup>
 
 ## Common Components
 
