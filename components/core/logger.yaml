@@ -1,2 +1,5 @@
 ---
+#
+# https://esphome.io/components/logger.html
+#
 logger:

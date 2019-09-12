@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/light/monochromatic.html
+#
 light:
   - platform: monochromatic
     name: ${esphome_name}_green_led

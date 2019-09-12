@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/esphome.html
+#
 esphome:
   name: ${esphome_name}
   platform: ${esphome_platform}

@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/output/esp8266_pwm.html
+#
 output:
   - platform: esp8266_pwm
     id: green_led

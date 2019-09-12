@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/switch/gpio.html
+#
 switch:
   - platform: gpio
     name: ${esphome_name}_relay

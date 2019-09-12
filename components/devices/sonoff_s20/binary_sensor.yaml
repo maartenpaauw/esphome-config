@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/binary_sensor/gpio.html
+#
 platform: gpio
 name: ${esphome_name}_button
 pin:

@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/output/my9231.html
+#
 output:
   - platform: my9231
     id: red

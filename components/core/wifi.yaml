@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/wifi.html
+#
 wifi:
   ssid: ${wifi_ssid}
   password: ${wifi_password}

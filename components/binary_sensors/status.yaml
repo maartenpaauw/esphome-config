@@ -1,3 +1,6 @@
 ---
+#
+# https://esphome.io/components/binary_sensor/status.html
+#
 platform: status
 name: ${esphome_name}_status

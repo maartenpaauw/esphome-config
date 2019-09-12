@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/output/my9231.html
+#
 my9231:
   data_pin: GPIO13
   clock_pin: GPIO15

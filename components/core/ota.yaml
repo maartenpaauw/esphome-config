@@ -1,3 +1,6 @@
 ---
+#
+# https://esphome.io/components/ota.html
+#
 ota:
   password: ${ota_password}

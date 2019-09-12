@@ -1,4 +1,7 @@
 ---
+#
+# https://esphome.io/components/status_led.html
+#
 status_led:
   pin:
     number: GPIO13
