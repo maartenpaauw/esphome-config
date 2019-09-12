@@ -6,35 +6,13 @@ substitutions:
   esphome_board: esp01_1m
 
 <<: !include components/common.yaml
+<<: !include components/devices/sonoff_touch/light.yaml
+<<: !include components/devices/sonoff_touch/output.yaml
+<<: !include components/devices/sonoff_touch/switch.yaml
 
 binary_sensor:
   - !include components/binary_sensors/status.yaml
-  - platform: gpio
-    name: ${esphome_name}_button
-    pin:
-      number: GPIO0
-      mode: INPUT_PULLUP
-      inverted: true
-    on_press:
-      - switch.toggle: relay
+  - !include components/devices/sonoff_touch/binary_sensor.yaml
 
 text_sensor:
   - !include components/text_sensors/version.yaml
-
-light:
-  - platform: monochromatic
-    name: ${esphome_name}_blue_led
-    output: blue_led
-
-output:
-  - platform: esp8266_pwm
-    id: blue_led
-    pin:
-      number: GPIO13
-      inverted: true
-
-switch:
-  - platform: gpio
-    name: ${esphome_name}_relay
-    id: relay
-    pin: GPIO12

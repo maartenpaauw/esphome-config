@@ -6,35 +6,12 @@ substitutions:
   esphome_board: esp01_1m
 
 <<: !include components/common.yaml
+<<: !include components/devices/arilux/my9231.yaml
+<<: !include components/devices/arilux/light.yaml
+<<: !include components/devices/arilux/output.yaml
 
 binary_sensor:
   - !include components/binary_sensors/status.yaml
 
 text_sensor:
   - !include components/text_sensors/version.yaml
-
-my9231:
-  data_pin: GPIO13
-  clock_pin: GPIO15
-
-light:
-  - platform: rgbw
-    name: ${esphome_name}_light
-    red: red
-    green: green
-    blue: blue
-    white: white
-
-output:
-  - platform: my9231
-    id: white
-    channel: 0
-  - platform: my9231
-    id: red
-    channel: 3
-  - platform: my9231
-    id: green
-    channel: 2
-  - platform: my9231
-    id: blue
-    channel: 1

@@ -1,0 +1,14 @@
+---
+output:
+  - platform: my9231
+    id: red
+    channel: 3
+  - platform: my9231
+    id: green
+    channel: 2
+  - platform: my9231
+    id: blue
+    channel: 1
+  - platform: my9231
+    id: white
+    channel: 0

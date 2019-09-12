@@ -1,0 +1,8 @@
+---
+light:
+  - platform: rgbw
+    name: ${esphome_name}_light
+    red: red
+    green: green
+    blue: blue
+    white: white

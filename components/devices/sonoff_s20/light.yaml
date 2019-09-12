@@ -1,0 +1,5 @@
+---
+light:
+  - platform: monochromatic
+    name: ${esphome_name}_green_led
+    output: green_led

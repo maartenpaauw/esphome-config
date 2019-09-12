@@ -1,0 +1,7 @@
+---
+output:
+  - platform: esp8266_pwm
+    id: blue_led
+    pin:
+      number: GPIO13
+      inverted: true

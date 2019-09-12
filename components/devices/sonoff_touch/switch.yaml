@@ -1,0 +1,6 @@
+---
+switch:
+  - platform: gpio
+    name: ${esphome_name}_relay
+    id: relay
+    pin: GPIO12

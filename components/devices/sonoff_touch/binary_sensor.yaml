@@ -1,0 +1,9 @@
+---
+platform: gpio
+name: ${esphome_name}_button
+pin:
+  number: GPIO0
+  mode: INPUT_PULLUP
+  inverted: true
+on_press:
+  - switch.toggle: relay
