@@ -1,7 +1,7 @@
 ---
 substitutions:
   <<: !include secrets.yaml
-  esphome_name: sonoff_s20_wall_fan
+  esphome_name: sonoff_s20_2
   esphome_platform: ESP8266
   esphome_board: esp01_1m
 
