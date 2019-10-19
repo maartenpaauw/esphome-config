@@ -15,6 +15,11 @@
 - MY9231 <sup>([my9231.yaml](./components/devices/arilux/my9231.yaml))</sup>
 - Output <sup>([output.yaml](./components/devices/arilux/output.yaml))</sup>
 
+### Magic Home LED Controller
+
+- Light <sup>([light.yaml](./components/devices/magic_home_led_controller/light.yaml))</sup>
+- Output <sup>([output.yaml](./components/devices/magic_home_led_controller/output.yaml))</sup>
+
 ### Sonoff Basic
 
 - Binary Sensor <sup>([binary_sensor.yaml](./components/devices/sonoff_basic/binary_sensor.yaml))</sup>

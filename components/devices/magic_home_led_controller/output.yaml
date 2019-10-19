@@ -1,0 +1,17 @@
+---
+#
+# https://esphome.io/components/output/my9231.html
+#
+output:
+  - platform: esp8266_pwm
+    id: red
+    pin: 14
+  - platform: esp8266_pwm
+    id: green
+    pin: 5
+  - platform: esp8266_pwm
+    id: blue
+    pin: 12
+  - platform: esp8266_pwm
+    id: white
+    pin: 13

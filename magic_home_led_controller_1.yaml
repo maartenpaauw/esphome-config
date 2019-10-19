@@ -1,0 +1,16 @@
+---
+substitutions:
+  <<: !include secrets.yaml
+  esphome_name: magic_home_led_controller_1
+  esphome_platform: ESP8266
+  esphome_board: esp01_1m
+
+<<: !include components/common.yaml
+<<: !include components/devices/magic_home_led_controller/light.yaml
+<<: !include components/devices/magic_home_led_controller/output.yaml
+
+binary_sensor:
+  - !include components/binary_sensors/status.yaml
+
+text_sensor:
+  - !include components/text_sensors/version.yaml

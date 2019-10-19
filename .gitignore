@@ -7,6 +7,7 @@ secrets.yaml
 # Ignore every build directory for each component.
 arilux_e27_1/
 arilux_e27_2/
+magic_home_led_controller_1/
 sonoff_basic_1/
 sonoff_s20_1/
 sonoff_s20_2/
